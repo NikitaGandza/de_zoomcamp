@@ -25,13 +25,10 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.9.6
-
-      - name: Terraform Init
-        run: terraform init
-        working-directory: ./terraform
-
-      - name: Terrafoem format
-        run: terraform fmt
+      
+      - name: Terraform format
+        run: terraform fmt -check
+        working-directory: ./infra/terraform
 
   terraform-plan:
     runs-on: ubuntu-latest
