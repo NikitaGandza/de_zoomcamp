@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     bucket         	   = "terraform-states-nikita"
     key              	   = "state/terraform.tfstate"
-    region         	   = "eu-north-1"
+    region         	   = var.region
     encrypt        	   = true
     dynamodb_table = "terraform-lockid-nikita"
   }
