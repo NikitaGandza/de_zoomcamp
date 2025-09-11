@@ -28,7 +28,7 @@ jobs:
       
       - name: Terraform format
         run: terraform fmt -check
-        working-directory: ./infra/terraform
+        working-directory: ./terraform
 
   terraform-plan:
     runs-on: ubuntu-latest
